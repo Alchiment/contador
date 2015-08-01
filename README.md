@@ -1,2 +1,2 @@
 # contador
-Contador de billetes con AngularJS
+Sencillo contador de billetes con AngularJS
