@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contador numeros</title>
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="css/lib/style.css">
+</head>
+<body ng-app="AppContador">
+    <div class="container__ap">
+       <div class="container">
+        <div class="row">
+            <div class="col-md-6" ng-controller="ControllerBilletes">
+                <h1>Billetes</h1>
+                <hr>
+                <div class="row">
+                    <div class="col-md-12" align="center">
+                        <div class="well">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <button class="btn btn-default btn_billete" ng-click="selectBillete('mil')">
+                                        Mil 1000
+                                    </button>
+                                </div>
+                                <div class="col-md-4">
+                                    <button class="btn btn-default btn_billete" ng-click="selectBillete('dosmil')">
+                                        DosMil 2000
+                                    </button>
+                                </div>
+                                <div class="col-md-4">
+                                    <button class="btn btn-default btn_billete" ng-click="selectBillete('cincomil')">
+                                        CincoMil 5000
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="row margin-top-10">
+                                <div class="col-md-4">
+                                    <button class="btn btn-default btn_billete" ng-click="selectBillete('diezmil')">
+                                        Diez mil 10000
+                                    </button>
+                                </div>
+                                <div class="col-md-4">
+                                    <button class="btn btn-default btn_billete" ng-click="selectBillete('veintemil')">
+                                        VeinteMil 200000
+                                    </button>
+                                </div>
+                                <div class="col-md-4">
+                                    <button class="btn btn-default btn_billete" ng-click="selectBillete('cincuentamil')">
+                                        CincuentaMil 50000
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="row margin-top-10">
+                                <div ng-model="val_selected">{{val_selected}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="rs">{{total}}</div>    
+                    </div>
+                    <div class="col-md-6">
+                       <div class="row">
+                           <div class="col-md-4">
+                               Cantidad
+                           </div>
+                           <div class="col-md-8">
+                                <div class="actions__money">
+                                    <input type="number" placeholder="Cantidad de billetes" id="txt_billetes" ng-model="cantidad" ng-change="calcular()">
+                                </div>
+                           </div>
+                       </div>
+                       <div class="row margin-top-10">
+                           <div class="col-md-12" align="center">
+                              <button class="btn btn-success" ng-click="calcular()">
+                                   Calcular
+                               </button>
+                           </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h1>Monedas</h1>
+                <hr>
+                <div class="row">
+                    <div class="col-md-12">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+       </div>
+    </div>
+    <script src="js/vendor/jquery-1.11.3.min.js"></script>
+    <script src="js/vendor/bootstrap.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/lib/controllers/ctr_contador.js"></script>
+</body>
+</html>
